@@ -1,13 +1,5 @@
 version: 2.1
 
-parameters:
-  concordprocessid:
-    type: string
-    default: "latest"
-  concordtoken:
-    type: string
-    default: "latest"
-
 jobs:
   build-and-test:
     machine: true
