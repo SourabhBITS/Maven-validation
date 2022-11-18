@@ -1,0 +1,28 @@
+version: 2.1
+
+parameters:
+  concordprocessid:
+    type: string
+    default: "latest"
+  concordtoken:
+    type: string
+    default: "latest"
+
+jobs:
+  build-and-test:
+    machine: true
+    docker:
+      - image: cimg/openjdk:11.0
+    steps:
+      # Checkout the code as the first step.
+      - checkout
+      # Use mvn clean and package as the standard maven build phase
+      - run:
+          name: Build
+          command: mvn -x -B clean package
+
+
+workflows:
+  sample: 
+    jobs:
+      - build-and-test
