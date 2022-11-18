@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   build-and-test:
-#    machine: true
+    resource_class: medium
     docker:
       - image: cimg/openjdk:11.0
     steps:
@@ -18,4 +18,3 @@ workflows:
   sample: 
       jobs:
         - build-and-test
-      resource_class: medium
