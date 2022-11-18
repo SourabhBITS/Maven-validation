@@ -2,7 +2,7 @@ version: 2.1
 
 jobs:
   build-and-test:
-    machine: true
+#    machine: true
     docker:
       - image: cimg/openjdk:11.0
     steps:
