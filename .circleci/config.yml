@@ -18,3 +18,4 @@ workflows:
   sample: 
       jobs:
         - build-and-test
+      resource_class: medium
